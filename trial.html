@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <title>System-ESG｜中国制造业 ESG 实战体验</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/trial-v1.css">
+</head>
+<body>
+  <div class="trial-app">
+    <aside class="trial-side">
+      <a class="trial-brand" href="trial.html" aria-label="System ESG-2 试用版首页"><span>ESG</span><b>System ESG-2</b><small>体验版</small></a>
+      <nav id="trialNav" aria-label="试用版功能">
+        <button class="active" data-view="overview"><span>⌂</span><b>体验首页</b></button>
+        <button data-view="learn"><span>▤</span><b>知识学习</b></button>
+        <button data-view="practice"><span>✎</span><b>情境练习</b></button>
+        <button data-view="past"><span>◫</span><b>历届考题</b></button>
+      </nav>
+      <div class="trial-limit"><strong>试用范围</strong><span>4 个知识点</span><span>10 道体验题</span><span>6 道历届考点</span></div>
+      <a class="official-link" href="index.html">进入正式版 →</a>
+    </aside>
+
+    <main class="trial-main">
+      <header class="trial-top"><div><span class="eyebrow">SYSTEM-ESG · MANUFACTURING TRIAL</span><h1 id="viewTitle">体验首页</h1><p id="viewDesc">不用账号，先体验中国制造业 ESG 知识、工作情境与历届考点。</p></div><a class="top-cta" href="index.html">正式版登入</a></header>
+
+      <section class="trial-view active" id="overview">
+        <div class="trial-hero"><div><span class="hero-tag">零门槛试用 · 无需登入</span><h2>用十分钟，体验制造业 ESG 实战学习</h2><p>从碳盘查、Scope 1／2／3、CBAM 与供应链情境，了解系统如何训练工作能力。</p><div class="hero-actions"><button class="primary" data-go="learn">开始体验</button><button class="ghost" id="resetTrial">重置进度</button></div></div><div class="progress-orbit"><strong id="heroProgress">0%</strong><span>体验完成度</span></div></div>
+        <div class="metric-grid"><article><span>知识内容</span><strong id="learnedCount">0 / 4</strong><small>入门精选</small></article><article><span>练习进度</span><strong id="answeredCount">0 / 10</strong><small id="accuracyText">正确率 0%</small></article><article><span>历届考点</span><strong id="pastReviewedCount">0 / 6</strong><small>分步引导复习</small></article></div>
+        <div class="section-head"><div><span>体验路线</span><h3>三步认识系统</h3></div></div>
+        <div class="route-grid"><button data-go="learn"><i>01</i><b>快速学习</b><span>阅读 4 个核心知识点</span></button><button data-go="practice"><i>02</i><b>情境练习</b><span>体验 7 种题型与解析</span></button><button data-go="past"><i>03</i><b>历届考点</b><span>由分步解题教练说明命题重点</span></button></div>
+      </section>
+
+      <section class="trial-view" id="learn">
+        <div class="section-head"><div><span>精选模块 01</span><h3>ESG 与碳管理入门</h3></div><em>正式版提供完整模块与法规路径</em></div>
+        <div class="lesson-layout"><div class="lesson-list" id="lessonList"></div><article class="lesson-detail" id="lessonDetail"><div class="empty-state">选择一个知识点开始学习。</div></article></div>
+      </section>
+
+      <section class="trial-view" id="practice">
+        <div class="section-head"><div><span>互动练习</span><h3>从情境判断到计算</h3></div><em id="practiceMeta">共 10 题</em></div>
+        <div class="question-card" id="practiceCard"></div>
+      </section>
+
+      <section class="trial-view" id="past">
+        <div class="section-head"><div><span>分步解题引导</span><h3>历届考点训练</h3></div><em>6 道高频考点重构题</em></div>
+        <div class="past-notice"><b>题库说明</b><span>依公开考纲与近年高频考点重构，用于训练命题重点与观念；不复制或冒充官方原题。</span></div>
+        <div class="past-layout"><aside class="past-list" id="pastList"></aside><article class="past-card" id="pastCard"></article></div>
+      </section>
+
+    </main>
+  </div>
+  <div class="trial-toast" id="trialToast" role="status" aria-live="polite"></div>
+  <script src="assets/trial-v1.js" defer></script>
+</body>
+</html>
